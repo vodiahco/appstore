@@ -35,12 +35,19 @@ Or
         $storeEntity= new \DDataAppStore\Entity\AppStore();
         $store= new AppStoreSession(“namespace”,”storage_name”,$storeEntity, $sessionManager);
 
+You can use a custom session entity object that implements DDataAppStore\Base\StorageEntityInterface.
+or extends the DDataAppStore\Base\AppStore.
+        $newStoreEntity= new MyStorageEntity()
+        $store= new AppStoreSession(“my_namespace”,”storage_name”,$newStoreEntity, $sessionManager);
+
         $store->read() // returns the (store entity object) $storeEntity.
         $store->write(array(“returnUrl”=>”site/profile”); it accepts an array and maps the array key to the entity property and assigns the array value to the property.
-        $store->set($newStoreEntity) overwrites the entire entity object in the session.
+        $store->set($anotherStoreEntity) overwrites the entire entity object in the session.
         $store->clear() clears the session entity object;
 
         $entity=$store->read();
         $entity->returnUrl="site/newpage"; or $entity->setReturnUrl(“site/newpage”)
+
+
 
 
