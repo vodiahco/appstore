@@ -37,6 +37,7 @@ Or
 
 You can use a custom session entity object that implements DDataAppStore\Base\StorageEntityInterface.
 or extends the DDataAppStore\Base\AppStore.
+
         $newStoreEntity= new MyStorageEntity()
         $store= new AppStoreSession(“my_namespace”,”storage_name”,$newStoreEntity, $sessionManager);
 
