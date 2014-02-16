@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 DHTML
 =====
 
@@ -40,7 +41,5 @@ $store->clear() clears the session entity object;
 
 $entity=$store->read();
 $entity->returnUrl="site/newpage"; or $entity->setReturnUrl(“site/newpage”)
-
-
 
 
