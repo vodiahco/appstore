@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-DHTML
+
+AppStoreSession
 =====
 
 The AppStore is a wrapper around the Zend framework Session container, it is designed to persist structured data in the session.
@@ -26,7 +26,7 @@ The requirements of this module is listed in composer.json.
             }
         ]
 
-## Usage in your view file. 
+## Usage in your controller. 
 
 You can simple instantiate the AppStoreSession with the default options like this:
 $appStore= new AppStoreSession();
