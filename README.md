@@ -25,10 +25,11 @@ The requirements of this module is listed in composer.json.
             }
         ]
 
-## Usage in your view file.
+## Usage in your view file. 
 
+You can simple instantiate the AppStoreSession with the default options like this:
 $appStore= new AppStoreSession();
-Or
+Or 
 $storeEntity= new \DDataAppStore\Entity\AppStore();
 $store= new AppStoreSession(“namespace”,”storage_name”,$storeEntity, $sessionManager);
 
@@ -38,7 +39,7 @@ $store->set($newStoreEntity) overwrites the entire entity object in the session.
 $store->clear() clears the session entity object;
 
 $entity=$store->read();
- $entity->returnUrl="site/newpage"; or $entity->setReturnUrl(“site/newpage”)
+$entity->returnUrl="site/newpage"; or $entity->setReturnUrl(“site/newpage”)
 
 
 
