@@ -13,6 +13,7 @@ The requirements of this module is listed in composer.json.
 1. require "DomainData/AppStore" : "dev-master", in your composer.json and run composer update
 2. Enable the DDataAppStore module in config/application.config.php file
 
+
         "require": {
             "php": ">=5.3.3",
             "zendframework/zendframework": "2.2.*",
@@ -29,17 +30,17 @@ The requirements of this module is listed in composer.json.
 ## Usage in your controller. 
 
 You can simple instantiate the AppStoreSession with the default options like this:
-$appStore= new AppStoreSession();
+        $appStore= new AppStoreSession();
 Or 
-$storeEntity= new \DDataAppStore\Entity\AppStore();
-$store= new AppStoreSession(“namespace”,”storage_name”,$storeEntity, $sessionManager);
+        $storeEntity= new \DDataAppStore\Entity\AppStore();
+        $store= new AppStoreSession(“namespace”,”storage_name”,$storeEntity, $sessionManager);
 
-$store->read() // returns the (store entity object) $storeEntity.
-$store->write(array(“returnUrl”=>”site/profile”); it accepts an array and maps the array key to the entity property and assigns the array value to the property.
-$store->set($newStoreEntity) overwrites the entire entity object in the session.
-$store->clear() clears the session entity object;
+        $store->read() // returns the (store entity object) $storeEntity.
+        $store->write(array(“returnUrl”=>”site/profile”); it accepts an array and maps the array key to the entity property and assigns the array value to the property.
+        $store->set($newStoreEntity) overwrites the entire entity object in the session.
+        $store->clear() clears the session entity object;
 
-$entity=$store->read();
-$entity->returnUrl="site/newpage"; or $entity->setReturnUrl(“site/newpage”)
+        $entity=$store->read();
+        $entity->returnUrl="site/newpage"; or $entity->setReturnUrl(“site/newpage”)
 
 
